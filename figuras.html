@@ -45,7 +45,22 @@
             <div class="card-figura-content">
               <div class="form-input">
                 <label for="lCuadrado">Lado del cuadrado:</label>
-                <input type="number" name="lCuadrado" id="lCuadrado" />
+                <input
+                  type="number"
+                  name="lCuadrado"
+                  id="lCuadrado"
+                  class="in-cuadrado"
+                />
+              </div>
+              <div class="form-input">
+                <label for="uCudrado">Unidad de medida</label>
+                <select name="uCuadrado" id="uCuadrado">
+                  <option value="cm">CM</option>
+                  <option value="m">M</option>
+                  <option value="km">KM</option>
+                  <option value="ft">Pies</option>
+                  <option value="Pulgadas">Pulgadas</option>
+                </select>
               </div>
             </div>
             <div class="result-container">
@@ -81,19 +96,49 @@
             <div class="card-figura-content">
               <div class="form-input">
                 <label for="lATriangulo">Lado A del triángulo:</label>
-                <input type="number" name="lATriangulo" id="lATriangulo" />
+                <input
+                  type="number"
+                  name="lATriangulo"
+                  id="lATriangulo"
+                  class="in-triangulo"
+                />
               </div>
               <div class="form-input">
                 <label for="lBTriangulo">Lado B del triángulo:</label>
-                <input type="number" name="lBTriangulo" id="lBTriangulo" />
+                <input
+                  type="number"
+                  name="lBTriangulo"
+                  id="lBTriangulo"
+                  class="in-triangulo"
+                />
               </div>
               <div class="form-input">
-                <label for="bTraingulo">Base del triángulo:</label>
-                <input type="number" name="bTraingulo" id="bTraingulo" />
+                <label for="bTriangulo">Base del triángulo:</label>
+                <input
+                  type="number"
+                  name="bTriangulo"
+                  id="bTriangulo"
+                  class="in-triangulo"
+                />
               </div>
               <div class="form-input">
                 <label for="alTriangulo">Altura del triángulo:</label>
-                <input type="number" name="alTriangulo" id="alTriangulo" />
+                <input
+                  type="number"
+                  name="alTriangulo"
+                  id="alTriangulo"
+                  class="in-triangulo"
+                />
+              </div>
+              <div class="form-input">
+                <label for="uTriangulo">Unidad de medida</label>
+                <select name="uTriangulo" id="uTriangulo">
+                  <option value="cm">CM</option>
+                  <option value="m">M</option>
+                  <option value="km">KM</option>
+                  <option value="ft">Pies</option>
+                  <option value="Pulgadas">Pulgadas</option>
+                </select>
               </div>
             </div>
             <div class="result-container">
@@ -130,7 +175,22 @@
               <p>PI: <b id="pi"></b></p>
               <div class="form-input">
                 <label for="rCirculo">Radio del círculo:</label>
-                <input type="number" name="rCirculo" id="rCirculo" />
+                <input
+                  type="number"
+                  name="rCirculo"
+                  id="rCirculo"
+                  class="in-circulo"
+                />
+              </div>
+              <div class="form-input">
+                <label for="uCirculo">Unidad de medida</label>
+                <select name="uCirculo" id="uCirculo">
+                  <option value="cm">CM</option>
+                  <option value="m">M</option>
+                  <option value="km">KM</option>
+                  <option value="ft">Pies</option>
+                  <option value="Pulgadas">Pulgadas</option>
+                </select>
               </div>
             </div>
             <div class="result-container">
@@ -156,5 +216,6 @@
       </div>
     </main>
     <script src="./figuras.js"></script>
+    <script src="./inputs_observer.js"></script>
   </body>
 </html>

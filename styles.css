@@ -48,7 +48,9 @@ header p {
 .figuras-container {
   display: flex;
   min-width: 375px;
+  max-width: 80vw;
   width: 100%;
+  margin: 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -114,7 +116,8 @@ header p {
   font-weight: 400;
   padding-bottom: 8px;
 }
-.form-input input {
+.form-input input,
+.form-input select {
   height: 32px;
   width: 100px;
   padding: 0 4px;
@@ -126,9 +129,17 @@ header p {
   border: 1px solid var(--very-dark-blue);
   outline: none;
 }
-.form-input input:focus {
+.form-input select {
+  width: 110px;
+}
+.form-input input:focus,
+.form-input select:focus {
   border: 2px solid var(--yellow);
   box-shadow: 2px 2px 3px var(--very-dark-blue);
+}
+.form-input select option:hover {
+  background: var(--yellow);
+  cursor: pointer;
 }
 .result-container {
   margin: 16px;
@@ -155,11 +166,13 @@ header p {
 }
 .result--perimetro p:nth-child(1),
 .result--area p:nth-child(1) {
-  margin-right: 8px;
+  margin-right: 16px;
 }
 .result--perimetro p:nth-child(2),
 .result--area p:nth-child(2) {
+  margin-top: -10px;
   font-family: var(--sffamily);
+  font-size: var(--lg);
 }
 .card-figura-ca {
   padding: 16px;
