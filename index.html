@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Figuras geometricas | Curso Práctico de JavaScript</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f34d1c1890.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Figuras geométricas</h1>
+      <p>Cacula el <b>Perímetro</b> y <b>Área</b> de figuras geométricas</p>
+    </header>
+    <main>
+      <div class="figuras-container">
+        <article class="card-figura">
+          <form>
+            <div class="card-figura--title">
+              <img
+                src="./assets/images/square.jpg"
+                alt="sqaure"
+                class="animated-fig"
+              />
+              <h3>Cuadrado</h3>
+            </div>
+            <div class="card-figura-content">
+              <div class="form-input">
+                <label for="lCuadrado">Lado del cuadrado:</label>
+                <input
+                  type="number"
+                  name="lCuadrado"
+                  id="lCuadrado"
+                  class="in-cuadrado"
+                />
+              </div>
+              <div class="form-input">
+                <label for="uCudrado">Unidad de medida</label>
+                <select name="uCuadrado" id="uCuadrado">
+                  <option value="cm">CM</option>
+                  <option value="m">M</option>
+                  <option value="km">KM</option>
+                  <option value="ft">Pies</option>
+                  <option value="Pulgadas">Pulgadas</option>
+                </select>
+              </div>
+            </div>
+            <div class="result-container">
+              <h4>Resultados</h4>
+              <div class="card-figura-result">
+                <div class="result--perimetro">
+                  <p>Perímetro:</p>
+                  <p id="pCuadrado">0</p>
+                </div>
+                <div class="result--area">
+                  <p>Área:</p>
+                  <p id="aCuadrado">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-figura-ca">
+              <button type="button" class="disabled-button" id="btnCuadrado">
+                Calcular
+              </button>
+            </div>
+          </form>
+        </article>
+        <article class="card-figura">
+          <form>
+            <div class="card-figura--title">
+              <img
+                src="./assets/images/trinagle.png"
+                alt="triangle"
+                class="animated-fig"
+              />
+              <h3>Triángulo</h3>
+            </div>
+            <div class="card-figura-content">
+              <div class="form-input">
+                <label for="lATriangulo">Lado A del triángulo:</label>
+                <input
+                  type="number"
+                  name="lATriangulo"
+                  id="lATriangulo"
+                  class="in-triangulo"
+                />
+              </div>
+              <div class="form-input">
+                <label for="lBTriangulo">Lado B del triángulo:</label>
+                <input
+                  type="number"
+                  name="lBTriangulo"
+                  id="lBTriangulo"
+                  class="in-triangulo"
+                />
+              </div>
+              <div class="form-input">
+                <label for="bTriangulo">Base del triángulo:</label>
+                <input
+                  type="number"
+                  name="bTriangulo"
+                  id="bTriangulo"
+                  class="in-triangulo"
+                />
+              </div>
+              <div class="form-input">
+                <label for="alTriangulo">Altura del triángulo:</label>
+                <input
+                  type="number"
+                  name="alTriangulo"
+                  id="alTriangulo"
+                  class="in-triangulo"
+                />
+              </div>
+              <div class="form-input">
+                <label for="uTriangulo">Unidad de medida</label>
+                <select name="uTriangulo" id="uTriangulo">
+                  <option value="cm">CM</option>
+                  <option value="m">M</option>
+                  <option value="km">KM</option>
+                  <option value="ft">Pies</option>
+                  <option value="Pulgadas">Pulgadas</option>
+                </select>
+              </div>
+            </div>
+            <div class="result-container">
+              <h4>Resultados</h4>
+              <div class="card-figura-result">
+                <div class="result--perimetro">
+                  <p>Perímetro:</p>
+                  <p id="pTriangulo">0</p>
+                </div>
+                <div class="result--area">
+                  <p>Área:</p>
+                  <p id="aTriangulo">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-figura-ca">
+              <button type="button" class="disabled-button" id="btnTriangulo">
+                Calcular
+              </button>
+            </div>
+          </form>
+        </article>
+        <article class="card-figura">
+          <form>
+            <div class="card-figura--title">
+              <img
+                src="./assets/images/circle.png"
+                alt="circle"
+                class="animated-fig"
+              />
+              <h3>Círculo</h3>
+            </div>
+            <div class="card-figura-content">
+              <p>PI: <b id="pi"></b></p>
+              <div class="form-input">
+                <label for="rCirculo">Radio del círculo:</label>
+                <input
+                  type="number"
+                  name="rCirculo"
+                  id="rCirculo"
+                  class="in-circulo"
+                />
+              </div>
+              <div class="form-input">
+                <label for="uCirculo">Unidad de medida</label>
+                <select name="uCirculo" id="uCirculo">
+                  <option value="cm">CM</option>
+                  <option value="m">M</option>
+                  <option value="km">KM</option>
+                  <option value="ft">Pies</option>
+                  <option value="Pulgadas">Pulgadas</option>
+                </select>
+              </div>
+            </div>
+            <div class="result-container">
+              <h4>Resultados</h4>
+              <div class="card-figura-result">
+                <div class="result--perimetro">
+                  <p>Perímetro:</p>
+                  <p id="pCirculo">0</p>
+                </div>
+                <div class="result--area">
+                  <p>Área:</p>
+                  <p id="aCirculo">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-figura-ca">
+              <button type="button" class="disabled-button" id="btnCirculo">
+                Calcular
+              </button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </main>
+    <script src="./figuras.js"></script>
+    <script src="./inputs_observer.js"></script>
+  </body>
+</html>
