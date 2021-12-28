@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Figuras geometricas | Curso Práctico de JavaScript</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
   </head>
   <body>
-    <h1>Figuras geométricas</h1>
+    <header>
+      <h1>Figuras geométricas</h1>
+      <p>Cacula el <b>Perímetro</b> y <b>Área</b> de figuras geométricas</p>
+    </header>
+    <main>
+      <div class="figuras-container container">
+        <article class="card-figura">
+          <form>
+            <div class="card-figura--title">
+              <h3>Cuadrado</h3>
+            </div>
+            <div class="card-figura-content">
+              <div class="form-input">
+                <label for="ladoC">Lado del cuadrado:</label>
+                <input type="number" name="ladoC" id="ladoC" />
+              </div>
+            </div>
+            <div class="card-figura--ca">
+              <button type="button">Calcular</button>
+            </div>
+          </form>
+        </article>
+        <article class="card-figura">
+          <form>
+            <div class="card-figura--title">
+              <h3>Triángulo</h3>
+            </div>
+            <div class="card-figura-content">
+              <div class="form-input">
+                <label for="ladoA">Lado A del triángulo:</label>
+                <input type="number" name="ladoA" id="ladoA" />
+              </div>
+              <div class="form-input">
+                <label for="ladoB">Lado B del triángulo:</label>
+                <input type="number" name="ladoB" id="ladoB" />
+              </div>
+              <div class="form-input">
+                <label for="base">Base del triángulo:</label>
+                <input type="number" name="base" id="base" />
+              </div>
+              <div class="form-input">
+                <label for="altura">Altura del triángulo:</label>
+                <input type="number" name="altura" id="altura" />
+              </div>
+            </div>
+            <div class="card-figura--ca">
+              <button type="button">Calcular</button>
+            </div>
+          </form>
+        </article>
+        <article class="card-figura">
+          <form>
+            <div class="card-figura--title">
+              <h3>Círculo</h3>
+            </div>
+            <div class="card-figura-content">
+              <p>PI: <b id="pi"></b></p>
+              <div class="form-input">
+                <label for="radio">Radio del círculo:</label>
+                <input type="number" name="radio" id="radio" />
+              </div>
+            </div>
+            <div class="card-figura--ca">
+              <button type="button">Calcular</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </main>
     <script src="./figuras.js"></script>
   </body>
 </html>
