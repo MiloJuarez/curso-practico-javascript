@@ -7,6 +7,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f34d1c1890.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -14,65 +31,125 @@
       <p>Cacula el <b>Perímetro</b> y <b>Área</b> de figuras geométricas</p>
     </header>
     <main>
-      <div class="figuras-container container">
+      <div class="figuras-container">
         <article class="card-figura">
           <form>
             <div class="card-figura--title">
+              <img
+                src="./assets/images/square.jpg"
+                alt="sqaure"
+                class="animated-fig"
+              />
               <h3>Cuadrado</h3>
             </div>
             <div class="card-figura-content">
               <div class="form-input">
-                <label for="ladoC">Lado del cuadrado:</label>
-                <input type="number" name="ladoC" id="ladoC" />
+                <label for="lCuadrado">Lado del cuadrado:</label>
+                <input type="number" name="lCuadrado" id="lCuadrado" />
               </div>
             </div>
-            <div class="card-figura--ca">
-              <button type="button">Calcular</button>
+            <div class="result-container">
+              <h4>Resultados</h4>
+              <div class="card-figura-result">
+                <div class="result--perimetro">
+                  <p>Perímetro:</p>
+                  <p id="pCuadrado">0</p>
+                </div>
+                <div class="result--area">
+                  <p>Área:</p>
+                  <p id="aCuadrado">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-figura-ca">
+              <button type="button" class="disabled-button" id="btnCuadrado">
+                Calcular
+              </button>
             </div>
           </form>
         </article>
         <article class="card-figura">
           <form>
             <div class="card-figura--title">
+              <img
+                src="./assets/images/trinagle.png"
+                alt="triangle"
+                class="animated-fig"
+              />
               <h3>Triángulo</h3>
             </div>
             <div class="card-figura-content">
               <div class="form-input">
-                <label for="ladoA">Lado A del triángulo:</label>
-                <input type="number" name="ladoA" id="ladoA" />
+                <label for="lATriangulo">Lado A del triángulo:</label>
+                <input type="number" name="lATriangulo" id="lATriangulo" />
               </div>
               <div class="form-input">
-                <label for="ladoB">Lado B del triángulo:</label>
-                <input type="number" name="ladoB" id="ladoB" />
+                <label for="lBTriangulo">Lado B del triángulo:</label>
+                <input type="number" name="lBTriangulo" id="lBTriangulo" />
               </div>
               <div class="form-input">
-                <label for="base">Base del triángulo:</label>
-                <input type="number" name="base" id="base" />
+                <label for="bTraingulo">Base del triángulo:</label>
+                <input type="number" name="bTraingulo" id="bTraingulo" />
               </div>
               <div class="form-input">
-                <label for="altura">Altura del triángulo:</label>
-                <input type="number" name="altura" id="altura" />
+                <label for="alTriangulo">Altura del triángulo:</label>
+                <input type="number" name="alTriangulo" id="alTriangulo" />
               </div>
             </div>
-            <div class="card-figura--ca">
-              <button type="button">Calcular</button>
+            <div class="result-container">
+              <h4>Resultados</h4>
+              <div class="card-figura-result">
+                <div class="result--perimetro">
+                  <p>Perímetro:</p>
+                  <p id="pTriangulo">0</p>
+                </div>
+                <div class="result--area">
+                  <p>Área:</p>
+                  <p id="aTriangulo">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-figura-ca">
+              <button type="button" class="disabled-button" id="btnTriangulo">
+                Calcular
+              </button>
             </div>
           </form>
         </article>
         <article class="card-figura">
           <form>
             <div class="card-figura--title">
+              <img
+                src="./assets/images/circle.png"
+                alt="circle"
+                class="animated-fig"
+              />
               <h3>Círculo</h3>
             </div>
             <div class="card-figura-content">
               <p>PI: <b id="pi"></b></p>
               <div class="form-input">
-                <label for="radio">Radio del círculo:</label>
-                <input type="number" name="radio" id="radio" />
+                <label for="rCirculo">Radio del círculo:</label>
+                <input type="number" name="rCirculo" id="rCirculo" />
               </div>
             </div>
-            <div class="card-figura--ca">
-              <button type="button">Calcular</button>
+            <div class="result-container">
+              <h4>Resultados</h4>
+              <div class="card-figura-result">
+                <div class="result--perimetro">
+                  <p>Perímetro:</p>
+                  <p id="pCirculo">0</p>
+                </div>
+                <div class="result--area">
+                  <p>Área:</p>
+                  <p id="aCirculo">0</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-figura-ca">
+              <button type="button" class="disabled-button" id="btnCirculo">
+                Calcular
+              </button>
             </div>
           </form>
         </article>
