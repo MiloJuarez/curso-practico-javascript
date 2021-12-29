@@ -35,7 +35,7 @@ header {
 }
 header h1 {
   font-family: var(--sffamily);
-  font-size: var(--lg);
+  font-size: var(--md);
   font-weight: 400;
   color: var(--yellow);
 }
@@ -45,7 +45,8 @@ header p {
   font-style: italic;
   color: var(--white);
 }
-.figuras-container {
+.figuras-container,
+.cards-container {
   display: flex;
   min-width: 375px;
   max-width: 80vw;
@@ -57,7 +58,8 @@ header p {
   padding: 24px;
   box-sizing: border-box;
 }
-.card-figura {
+.card-figura,
+.card {
   min-width: 280px;
   width: 300px;
   margin-bottom: 24px;
@@ -65,7 +67,8 @@ header p {
   border-radius: 8px;
   box-shadow: 2px 2px 2px var(--light-blue);
 }
-.card-figura .card-figura--title {
+.card-figura .card-figura--title,
+.card--title {
   display: flex;
   align-items: center;
   font-family: var(--pffamily);
@@ -100,7 +103,8 @@ header p {
   height: 24px;
   margin-right: 8px;
 }
-.card-figura-content {
+.card-figura-content,
+.card--content {
   padding: 16px;
 }
 .form-input {
@@ -110,7 +114,8 @@ header p {
   margin-bottom: 16px;
 }
 .form-input label,
-.card-figura-content p {
+.card-figura-content p,
+.card--content p {
   font-size: var(--sm);
   color: var(--white);
   font-weight: 400;
@@ -151,25 +156,29 @@ header p {
   font-weight: 400;
   color: var(--white);
 }
-.card-figura-result {
+.card-figura-result,
+.card--result {
   padding: 16px;
   background-color: var(--dark-blue);
   border-radius: 4px;
   box-shadow: 2px 2px 4px var(--very-dark-blue) inset;
 }
 .result--perimetro,
-.result--area {
+.result--area,
+.result--descuento {
   display: flex;
   align-items: center;
   font-size: var(--nr);
   color: var(--white);
 }
 .result--perimetro p:nth-child(1),
-.result--area p:nth-child(1) {
+.result--area p:nth-child(1),
+.result--descuento p:nth-child(1) {
   margin-right: 16px;
 }
 .result--perimetro p:nth-child(2),
-.result--area p:nth-child(2) {
+.result--area p:nth-child(2),
+.result--descuento p:nth-child(2) {
   margin-top: -10px;
   font-family: var(--sffamily);
   font-size: var(--lg);
@@ -199,17 +208,23 @@ header p {
   border-radius: 8px;
 }
 @media (min-width: 640px) {
-  .figuras-container {
+  header h1 {
+    font-size: var(--lg);
+  }
+  .figuras-container,
+  .cards-container {
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
   }
-  .card-figura {
+  .card-figura,
+  .card {
     width: 400px;
     margin: 16px;
   }
   .form-input label,
-  .card-figura-content p {
+  .card-figura-content p,
+  .card--content p {
     font-size: var(--nr);
   }
 }
