@@ -52,6 +52,44 @@
             </div>
           </form>
         </article>
+
+        <article class="card">
+          <form>
+            <div class="card--title">
+              <h3>Calcular descuento con cupón</h3>
+            </div>
+            <div class="card--content">
+              <div class="form-input">
+                <label for="precioOriginal">Precio $:</label>
+                <input
+                  type="number"
+                  name="precioOriginal"
+                  id="precioOriginal"
+                />
+              </div>
+              <div class="form-input">
+                <label for="cupon">Cupón de descuento:</label>
+                <div>
+                  <input type="text" name="cupon" id="cupon" />
+                  <small id="cuponInvalido">Cupón invalido</small>
+                </div>
+              </div>
+              <div class="form-input">
+                <p>Descuento %:</p>
+                <p id="cuponDescuento">0</p>
+              </div>
+            </div>
+            <div class="result-container">
+              <h4>Resultado</h4>
+              <div class="card--result">
+                <div class="result--descuento">
+                  <p>Precio con descuento:</p>
+                  <p id="precioConCD">$0.00</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </article>
       </div>
     </main>
     <script src="./index.js"></script>

@@ -113,6 +113,18 @@ header p {
   align-items: center;
   margin-bottom: 16px;
 }
+.form-input div {
+  display: flex;
+  flex-direction: column;
+}
+.form-input div input {
+  margin-bottom: 4px;
+}
+.form-input div small {
+  display: none;
+  font-size: var(--sm);
+  color: var(--yellow);
+}
 .form-input label,
 .card-figura-content p,
 .card--content p {
@@ -124,7 +136,7 @@ header p {
 .form-input input,
 .form-input select {
   height: 32px;
-  width: 100px;
+  width: 150px;
   padding: 0 4px;
   font-family: var(--sffamily);
   font-size: var(--md);
