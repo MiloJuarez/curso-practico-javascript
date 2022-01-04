@@ -53,3 +53,55 @@ function calcularMediana(lista) {
 
     return mediana;
 }
+
+/**==============================================
+ *                CALCULO DE LA MODA
+ *=============================================**/
+
+const lista3 = [1, 2, 3, 4, 67, 2, 3, 5, 7, 9, 8, 1, 2, 2, 3, 5, 3, 4];
+
+const listaCount = {};
+
+lista3.map((item) => {
+    if (listaCount[item]) {
+        listaCount[item] += 1;
+    } else {
+        listaCount[item] = 1;
+    }
+});
+
+let lista3Array = Object.entries(listaCount).sort((a, b) => a[1] - b[1]);
+
+function storeModa(currentNum) {
+    let count = 1;
+    let moda = { number: currentNum, times: count };
+
+    return {
+        countOcurrences: function (num) {
+            if (moda[num]) {
+                moda["times"] += 1;
+            }
+        },
+    };
+}
+
+function calcularModa(lista) {
+    lista.sort((a, b) => a - b);
+    const listaCount = {};
+
+    lista.map((item) => {
+        if (listaCount[item]) {
+            listaCount[item] += 1;
+        } else {
+            listaCount[item] = 1;
+        }
+    });
+
+    let arrayItemsRepeated = Object.entries(listaCount).sort(
+        (a, b) => a[1] - b[1]
+    );
+    let lastItem = arrayItemsRepeated[arrayItemsRepeated.length - 1];
+    let moda = arrayItemsRepeated.filter((item) => lastItem[1] === item[1] && item[1] !== 1 && lastItem[1] !== 1);
+
+    return moda;
+}
