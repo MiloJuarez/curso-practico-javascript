@@ -101,7 +101,41 @@ function calcularModa(lista) {
         (a, b) => a[1] - b[1]
     );
     let lastItem = arrayItemsRepeated[arrayItemsRepeated.length - 1];
-    let moda = arrayItemsRepeated.filter((item) => lastItem[1] === item[1] && item[1] !== 1 && lastItem[1] !== 1);
+    let moda = arrayItemsRepeated.filter(
+        (item) => lastItem[1] === item[1] && item[1] !== 1 && lastItem[1] !== 1
+    );
 
     return moda;
+}
+
+/**==============================================
+ *                MEDIA CUADRATICA
+ *=============================================**/
+
+const datos = [0.94, -0.42, 0.51, 1.29, -0.95];
+
+// Pasos para calcular la media cuadrática
+// #1 Calcular el cuadrado de cada dato
+// #2 Sumar todos los cuadrados calculados
+// #3 Dividir el resultado ente los números de datos
+// #4 Hallar la raiz cuadrada del valor anterior
+
+/**
+ * @param datos Lista de datos
+ */
+function calcularMediaCuadratica(datos) {
+    let datosAlCudrado = datos.map((dato) => {
+        return dato * dato;
+    });
+
+    let sumaDatosAlCuadrado = datosAlCudrado.reduce(
+        (valorAcumulado = 0, siguienteValor) => {
+            return valorAcumulado + siguienteValor;
+        }
+    );
+
+    let mediaDatos = sumaDatosAlCuadrado / datos.length;
+    let mediaCuadratica = Math.sqrt(mediaDatos);
+
+    return mediaCuadratica;
 }
